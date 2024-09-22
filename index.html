@@ -4,3 +4,24 @@
         <h1>Hello You! </h1>
     </boy>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Clock</title>
+</head>
+<body>
+    <h1>Current Time: <span id="clock"></span></h1>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // initial call to avoid delay
+    </script>
+</body>
+</html>
